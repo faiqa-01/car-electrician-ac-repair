@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://faiqa-01.github.io/car-electrician-ac-repair/sitemap.xml
