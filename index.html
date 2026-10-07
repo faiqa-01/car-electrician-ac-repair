@@ -1,0 +1,818 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Title -->
+    <title>Car Electrician & AC Repair  Services | Auto Electrical Services</title>
+
+    <!-- SEO Description -->
+    <meta name="description"
+          content="Professional car electrical diagnostics, battery services and automotive AC repair. Demo website for SEO and Google Search Console practice.">
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f5f6f8;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #f59e0b;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .menu a {
+            color: white;
+            font-weight: 500;
+        }
+
+        .menu a:hover {
+            color: #f59e0b;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            background:
+                linear-gradient(
+                    rgba(17, 24, 39, 0.88),
+                    rgba(17, 24, 39, 0.88)
+                ),
+                url("https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+            padding: 110px 0;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #f59e0b;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #e5e7eb;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #f59e0b;
+            color: #111827;
+        }
+
+        .btn-secondary {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.88;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .service-icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           WHY US
+        ========================== */
+
+        .why-us {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .why-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .why-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: #666;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            background: #111827;
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: #d1d5db;
+            margin-bottom: 12px;
+        }
+
+        .contact-box {
+            background: #1f2937;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .contact-box h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .contact-item span {
+            color: #d1d5db;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #0b1120;
+            color: #d1d5db;
+            text-align: center;
+            padding: 25px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 850px) {
+
+            .nav {
+                flex-direction: column;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .services,
+            .why-us {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="container nav">
+
+            <div class="logo">
+                Auto<span>Fix</span>
+            </div>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section id="home" class="hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <h1>
+                    Car Electrician &
+                    <span>AC Repair</span>
+                </h1>
+
+                <p>
+                    Reliable automotive electrical diagnostics,
+                    battery services and car air conditioning
+                    repair. This is a demo website created
+                    for SEO and Search Console practice.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#contact"
+                       class="btn btn-primary">
+                        Book a Service
+                    </a>
+
+                    <a href="#services"
+                       class="btn btn-secondary">
+                        View Services
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section id="services" class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Our Services
+                </h2>
+
+                <p>
+                    Explore our automotive electrical
+                    and air conditioning service categories.
+                </p>
+
+            </div>
+
+
+            <div class="services">
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Car Electrical Repair
+                    </h3>
+
+                    <p>
+                        Electrical diagnostics, wiring checks,
+                        lighting problems, fuses and electrical
+                        system troubleshooting.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        ❄️
+                    </div>
+
+                    <h3>
+                        Car AC Repair
+                    </h3>
+
+                    <p>
+                        Automotive air conditioning diagnostics,
+                        cooling problems, AC components and
+                        system troubleshooting.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🔋
+                    </div>
+
+                    <h3>
+                        Battery Service
+                    </h3>
+
+                    <p>
+                        Battery testing, battery replacement
+                        and basic vehicle electrical system checks.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🔧
+                    </div>
+
+                    <h3>
+                        Electrical Diagnostics
+                    </h3>
+
+                    <p>
+                        Troubleshooting electrical faults and
+                        identifying common vehicle electrical issues.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🚗
+                    </div>
+
+                    <h3>
+                        Auto Electrical Inspection
+                    </h3>
+
+                    <p>
+                        General inspection of vehicle electrical
+                        systems for common faults and problems.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        🛠️
+                    </div>
+
+                    <h3>
+                        General Auto Service
+                    </h3>
+
+                    <p>
+                        Basic automotive service and troubleshooting
+                        for common vehicle issues.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about" class="section about">
+
+        <div class="container">
+
+            <div class="about-content">
+
+
+                <div class="about-text">
+
+                    <h2>
+                        About Our Auto Service
+                    </h2>
+
+                    <p>
+                        AutoFix is a fictional practice business
+                        created for learning website development,
+                        local SEO and Google Search Console.
+                    </p>
+
+                    <p>
+                        This demo project shows how a service-based
+                        automotive website can be structured with
+                        service pages, contact information and
+                        SEO-friendly page elements.
+                    </p>
+
+                </div>
+
+
+                <div class="about-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1000&q=80"
+                        alt="Car repair workshop"
+                    >
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         WHY CHOOSE US
+    ========================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Why Choose Us
+                </h2>
+
+                <p>
+                    Example trust elements for a local
+                    automotive service website.
+                </p>
+
+            </div>
+
+
+            <div class="why-us">
+
+
+                <div class="why-card">
+
+                    <h3>
+                        Experienced Service
+                    </h3>
+
+                    <p>
+                        Focused on automotive electrical and
+                        AC repair services.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <h3>
+                        Diagnostic Approach
+                    </h3>
+
+                    <p>
+                        Problems are identified before
+                        recommending a repair.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <h3>
+                        Customer Focused
+                    </h3>
+
+                    <p>
+                        Clear communication about service
+                        requirements and repair needs.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact" class="section contact">
+
+        <div class="container">
+
+            <div class="contact-content">
+
+
+                <div class="contact-info">
+
+                    <h2>
+                        Contact Us
+                    </h2>
+
+                    <p>
+                        This is a fictional demo business.
+                        The contact information below is
+                        used only for learning.
+                    </p>
+
+                    <p>
+                        Need help with your vehicle?
+                        Contact our demo service team.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-box">
+
+                    <h3>
+                        Demo Contact Information
+                    </h3>
+
+                    <div class="contact-item">
+
+                        <strong>
+                            Phone
+                        </strong>
+
+                        <span>
+                            +966 50 000 0000
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <span>
+                            demo@example.com
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            Service
+                        </strong>
+
+                        <span>
+                            Car Electrical & AC Repair
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 AutoFix Demo Website
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
